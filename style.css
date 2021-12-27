@@ -1,0 +1,195 @@
+/* variable di root utama */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+:root {
+  --txt-light-color: #f7f7f7;
+  --txt-dark-color: #222;
+  --max-desktop-resolution: 800px;
+  --main-font: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+.container {
+  --whoami-bg-color: bisque;
+  --myhobby-bg-color: crimson;
+  --mysosmed-bg-color: coral;
+  --whoami-image-color: coral;
+  --myhobby-image-color: bisque;
+  --mysosmed-image-color: crimson;
+  --whoami-border-color: #555555;
+  --myhobby-border-color: #444;
+  --mysosmed-border-color: bisque;
+}
+
+section nav {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  box-shadow: 0 2px 20px 2px #222;
+}
+
+section nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+
+section nav ul li {
+  padding: 5px 10px;
+}
+
+section nav ul li:hover {
+  background-color: #555;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+section nav ul li a {
+  color: var(--txt-light-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.container h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--txt-light-color);
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-align: center;
+}
+
+.container p {
+  margin: 0;
+  color: var(--txt-light-color);
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu--whoami {
+  background-image: url(assets/images/parallax/whoami.jpg);
+}
+
+.menu--myhobby {
+  background-image: url(assets/images/parallax/hobby.jpg);
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.menu--mysosmed {
+  background-image: url(assets/images/parallax/sosmed.jpg);
+}
+
+.picture {
+  --picture-size-width: 150px;
+  --picture-size-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--whoami-image-color);
+}
+
+.picture--rounded {
+  background-image: url(assets/images/man.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+  border: 5px solid var(--whoami-border-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.picture--square {
+  background-image: url(assets/images/game.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+  border: 5px solid var(--myhobby-border-color);
+}
+
+.picture--custom {
+  background-image: url(assets/images/follow-us.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+  border: 5px solid var(--mysosmed-border-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  .container h1 {
+    font-size: 1.4em;
+    margin-top: 15px;
+  }
+  .container p {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .menu--myhobby {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section nav {
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    width: 100%;
+  }
+
+  section nav ul {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  section nav ul,
+  section nav ul li {
+    padding: 2px;
+    margin: 2px;
+  }
+
+  section nav ul li:nth-child(1) {
+    order: 1;
+  }
